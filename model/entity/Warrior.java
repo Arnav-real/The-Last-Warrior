@@ -37,6 +37,18 @@ public class Warrior extends Entity{
     this.abilityList = new ArrayList<>();
 }
 
+    public String getName(){
+        return name;
+    }
+
+    public int getHp(){
+        return hp;
+    }
+
+    public int getMaxHp(){
+        return maxHp;
+    }
+
     public void setBallistaActive(boolean ballistaActive) {
         this.ballistaActive = ballistaActive;
     }

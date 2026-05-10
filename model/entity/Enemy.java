@@ -22,6 +22,19 @@ public abstract class Enemy extends Entity {
 
     public abstract void specialAction(Warrior warrior, List<Enemy> allies);
 
+    public String getName(){
+        return name;
+    }
+
+    public int getHp(){
+        return hp;
+    }
+
+    public int getMaxHp(){
+        return maxHp;
+    }
+
+
     public int get_gold() {
         return goldReward;
     };

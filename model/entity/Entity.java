@@ -23,7 +23,7 @@ abstract class Entity {
         hp = Math.max(0, hp - damage);
     }
 
-    boolean isAlive(){
+    public boolean isAlive(){
         return hp > 0;
     }
 
