@@ -1,0 +1,164 @@
+package model.entity;
+
+import model.item.*;
+import strategy.*;
+import java.util.*;
+
+public class Warrior extends Entity{
+    private boolean lastStandActive = false;
+    private boolean frostBloodActive = false;
+    private boolean vampireStrikeActive = false;
+    private boolean thunderClapActive = false;
+    private boolean deathBargainActive = false;
+
+    private boolean ballistaActive = false;
+    private boolean oilTrapActive = false;
+    private boolean magicSealActive = false;
+    private boolean healingSpringActive = false;
+
+    private int ap;
+    private int orignalAtk = 0;
+    private int berserkerWavesRemaing = 0;
+    private int maxAp;
+    private int gold;
+    private int level;
+    private int xp;
+    private List<Ability> abilityList;
+    private List<PowerUp> powerList;
+
+    public Warrior(String name) {
+    super(name, 150, 150, 10, 0);
+    this.ap = 80;
+    this.maxAp = 80;
+    this.gold = 0;
+    this.level = 1;
+    this.xp = 0;
+    this.powerList = new ArrayList<>();
+    this.abilityList = new ArrayList<>();
+}
+
+    public void setBallistaActive(boolean ballistaActive) {
+        this.ballistaActive = ballistaActive;
+    }
+
+    public void setOilTrapActive(boolean oilTrapActive) {
+        this.oilTrapActive = oilTrapActive;
+    }
+
+    public void setMagicSealActive(boolean magicSealActive) {
+        this.magicSealActive = magicSealActive;
+    }
+
+    public void setHealingSpringActive(boolean healingSpringActive) {
+        this.healingSpringActive = healingSpringActive;
+    }
+
+    public void setThunderClapActive(boolean bool) {
+        thunderClapActive = bool;
+    }
+
+    public void setDeathBargainActive(boolean bool) {
+        deathBargainActive = bool;
+    }
+
+    public void setlastStandActive(boolean bool) {
+        lastStandActive = bool;
+    }
+
+    public int getAp() {
+        return ap;
+    }
+
+    public void setAp(int ap) {
+        this.ap = ap;
+    }
+
+    public int getOrignalAtk() {
+        return orignalAtk;
+    }
+
+    public void setOrignalAtk(int orignalAtk) {
+        this.orignalAtk = orignalAtk;
+    }
+
+    public int getMaxAp() {
+        return maxAp;
+    }
+
+    public void setMaxAp(int maxAp) {
+        this.maxAp = maxAp;
+    }
+
+    public int getGold() {
+        return gold;
+    }
+
+    public void setGold(int gold) {
+        this.gold = gold;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public int getXp() {
+        return xp;
+    }
+
+    public void setXp(int xp) {
+        this.xp = xp;
+    }
+
+    public List<Ability> getAbilityList() {
+        return abilityList;
+    }
+
+    public void setAbilityList(List<Ability> abilityList) {
+        this.abilityList = abilityList;
+    }
+
+    public List<PowerUp> getPowerList() {
+        return powerList;
+    }
+
+    public void setPowerList(List<PowerUp> powerList) {
+        this.powerList = powerList;
+    }
+
+    public void setFrostBloodActive(boolean bool) {
+        frostBloodActive = bool;
+    }
+
+    public void setVampireStrikeActive(boolean bool) {
+        vampireStrikeActive = bool;
+    }
+
+    public int getAtk() {
+        return atk;
+    }
+
+    public void setAtk(int atack) {
+        atk = atack;
+    }
+
+    public int getDef() {
+        return def;
+    }
+
+    public void setDef(int defense) {
+        def = defense;
+    }
+
+    public void setBerserkerWaves(int waves) {
+        berserkerWavesRemaing = waves;
+    }
+
+    @Override
+    public void attack(Entity target) {
+        target.takeDamage(getAtk());
+    }
+}
