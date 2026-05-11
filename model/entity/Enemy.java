@@ -21,6 +21,13 @@ public abstract class Enemy extends Entity {
         this.xpReward = xp;
     };
 
+    public void scaleToWave(int waveNumber) {
+        hp += waveNumber*5;
+        maxHp += waveNumber*5;
+        atk += waveNumber*3;
+        def += waveNumber*2;
+    }
+
     public abstract void specialAction(Warrior warrior, List<Enemy> allies);
 
     public String getName(){

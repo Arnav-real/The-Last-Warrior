@@ -44,6 +44,8 @@ public class GameEngine {
         }
 
         CLIPrinter.printDeath();
+        System.out.println(CLIPrinter.CYAN +   "  Waves survived: " + currentWave + CLIPrinter.RESET);
+        CLIPrinter.printSeparator();
     }
 } 
 

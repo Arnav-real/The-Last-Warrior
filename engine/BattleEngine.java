@@ -20,9 +20,7 @@ public class BattleEngine {
         }
         if(warrior.isAlive()) {
             CLIPrinter.printVictory();
-        } else {
-            CLIPrinter.printDeath();
-        }
+        } 
     }
 
     public void playerTurn(List<Enemy> enemies, Warrior warrior) {

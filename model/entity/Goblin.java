@@ -9,11 +9,11 @@ public class Goblin extends Enemy{
 
     public void attack(Entity target){
         target.takeDamage(atk);
+        target.takeDamage(atk);
     }
 
     public void specialAction(Warrior warrior, List<Enemy> allies) {
-        attack(warrior);
-        attack(warrior);
+        
     }
 
     public String toString() {

@@ -19,7 +19,7 @@ public class CLIPrinter {
     }
 
     public static void clearScreen() {
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        for (int i = 0; i < 5; i++) System.out.println();
     }
 
     public static void printMessage(String message, String color) {
@@ -78,12 +78,12 @@ public class CLIPrinter {
         printSeparator();
         System.out.println(YELLOW + "  [ YOUR TURN ]" + RESET);
         printSeparator();
-        System.out.println("  [1] " + WHITE + "Basic Attack  " + RESET + "  (Free)");
-        System.out.println("  [2] " + PURPLE + "Fireball      " + RESET + "  (20 AP) — hits all enemies");
-        System.out.println("  [3] " + BLUE + "Arrow Shot    " + RESET + "  (10 AP) — bypasses armor");
-        System.out.println("  [4] " + YELLOW + "Lightning     " + RESET + "  (30 AP) — stuns 40% chance");
+        System.out.println("  [1] " + WHITE + "Basic Attack  " + RESET + " (Free)   — Strike one enemy for " + YELLOW + "ATK damage" + RESET);
+        System.out.println("  [2] " + PURPLE + "Fireball      " + RESET + " (20 AP)  — Engulf ALL enemies in flames for " + RED + "30 damage" + RESET);
+        System.out.println("  [3] " + BLUE + "Arrow Shot    " + RESET + " (10 AP)  — Pierce one enemy for " + CYAN + "45 damage, ignores armor" + RESET);
+        System.out.println("  [4] " + YELLOW + "Lightning     " + RESET + " (30 AP)  — Strike random enemies for " + YELLOW + "60 damage + 40% stun" + RESET);
         printSeparator();
-        System.out.print(GREEN + "  > " + RESET);   
+        System.out.print(GREEN + "  > " + RESET);
     }
 
     public static void printWaveStart(int waveNumber) {
@@ -148,8 +148,6 @@ public class CLIPrinter {
         System.out.println(RED + "  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═════╝ " + RESET);
         printSeparator();
         System.out.println(YELLOW + "  The fortress has fallen. You fought bravely." + RESET);
-        System.out.println(CYAN +   "  Waves survived: " + RESET);
-        printSeparator();
     
     }
 
