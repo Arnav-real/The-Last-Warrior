@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Wizard extends Enemy{
     public Wizard() {
-        super("Wizard", 70, 70, 35, 0, 25, 30);
+        super("Wizard", 60, 60, 28, 0, 25, 30);
     }
 
     public void attack(Entity target){

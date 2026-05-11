@@ -28,7 +28,7 @@ public class Warrior extends Entity{
     private List<Item> inventory = new ArrayList<>();
 
     public Warrior(String name) {
-    super(name, 150, 150, 25, 10);
+    super(name, 200, 200, 30, 15);
     this.ap = 80;
     this.maxAp = 80;
     this.gold = 0;

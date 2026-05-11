@@ -4,7 +4,7 @@ import java.util.*;
 public class Goblin extends Enemy{
     
     public Goblin() {
-        super("Goblin", 30, 30, 8, 0, 5, 10);
+        super("Goblin", 25, 25, 6, 0, 5, 10);
     }
 
     public void attack(Entity target){

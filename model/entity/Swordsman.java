@@ -4,7 +4,7 @@ import java.util.*;
 public class Swordsman extends Enemy{
     
     public Swordsman() {
-        super("Swordsman", 60, 60, 15, 5, 10, 15);
+        super("Swordsman", 50, 50, 12, 5, 10, 15);
     }
 
     public void attack(Entity target){

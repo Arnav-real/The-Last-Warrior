@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Archer extends Enemy {
     public Archer() {
-        super("Archer", 50, 50, 20, 0, 12, 15);
+        super("Archer", 45, 45, 15, 0, 12, 15);
     }
 
     public void attack(Entity target){

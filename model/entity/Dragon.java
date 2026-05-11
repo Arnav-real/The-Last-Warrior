@@ -6,7 +6,7 @@ public class Dragon extends Enemy{
     private int turnCounter = 0;
 
     public Dragon(){
-        super("Dragon", 200, 200, 50, 20, 60, 80);
+        super("Dragon", 180, 180, 40, 20, 60, 80);
     }
 
     public void attack(Entity target){

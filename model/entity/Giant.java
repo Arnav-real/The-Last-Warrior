@@ -5,7 +5,7 @@ public class Giant extends Enemy{
     private int turnCounter = 0;
 
     public Giant() {
-        super("Giant", 120, 120, 25, 10, 20, 25);
+        super("Giant", 100, 100, 20, 10, 20, 25);
     }
 
     public void attack(Entity target){

@@ -22,10 +22,10 @@ public abstract class Enemy extends Entity {
     };
 
     public void scaleToWave(int waveNumber) {
-        hp += waveNumber*5;
-        maxHp += waveNumber*5;
-        atk += waveNumber*3;
-        def += waveNumber*2;
+        hp += waveNumber*3;
+        maxHp += waveNumber*3;
+        atk += waveNumber*2;
+        def += waveNumber*1;
     }
 
     public abstract void specialAction(Warrior warrior, List<Enemy> allies);
