@@ -123,6 +123,7 @@ public class BattleEngine {
                 }
             }
             CLIPrinter.printMessage("  Lightning strikes random enemies for 60 damage!", CLIPrinter.YELLOW);
+
         }
         else {
             CLIPrinter.printMessage("Insufficient Arcane Points!", CLIPrinter.RED);

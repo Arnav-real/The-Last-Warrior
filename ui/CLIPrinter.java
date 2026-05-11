@@ -101,17 +101,56 @@ public class CLIPrinter {
         printSeparator();
     }
 
+    public static void printAskName() {
+        printSeparator();
+        System.out.println(YELLOW + "  ⚔  WELCOME, WARRIOR  ⚔" + RESET);
+        printSeparator();
+        System.out.println(CYAN + "  The fortress stands on the edge of darkness." + RESET);
+        System.out.println(CYAN + "  One warrior remains. That warrior is you."    + RESET);
+        System.out.println(CYAN + "  Your name will be remembered... or forgotten." + RESET);
+        printSeparator();
+        System.out.print(GREEN + "  Enter your name, warrior: " + RESET);
+    }
+
+    public static void printPressEnter() {
+        printSeparator();
+        System.out.println(CYAN + "  ⚔  Wave cleared! Rest while you can..." + RESET);
+        System.out.println(GREEN + "  Press ENTER to face the next wave..." + RESET);
+        printSeparator();
+    }
+
+    public static void printWelcome() {
+        clearScreen();
+        printSeparator();
+        System.out.println(YELLOW + "     ██╗      █████╗ ███████╗████████╗    " + RESET);
+        System.out.println(YELLOW + "     ██║     ██╔══██╗██╔════╝╚══██╔══╝    " + RESET);
+        System.out.println(YELLOW + "     ██║     ███████║███████╗   ██║        " + RESET);
+        System.out.println(YELLOW + "     ██║     ██╔══██║╚════██║   ██║        " + RESET);
+        System.out.println(YELLOW + "     ███████╗██║  ██║███████║   ██║        " + RESET);
+        System.out.println(YELLOW + "     ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝       " + RESET);
+        System.out.println(RED +    "          W A R R I O R                    " + RESET);
+        printSeparator();
+        System.out.println(CYAN +   "  You are the last defender of the fortress." + RESET);
+        System.out.println(CYAN +   "  Endless waves of enemies approach.         " + RESET);
+        System.out.println(CYAN +   "  Fight until your last breath.              " + RESET);
+        printSeparator();
+    }
+    
+
     public static void printDeath() {
         clearScreen();
         printSeparator();
-        System.out.println(RED + "  ██████  ███████  ███████  ██████  " + RESET);
-        System.out.println(RED + "  ██  ██  ██       ██   ██  ██  ██  " + RESET);
-        System.out.println(RED + "  ██  ██  █████    ███████  ██  ██  " + RESET);
-        System.out.println(RED + "  ██  ██  ██       ██   ██  ██  ██  " + RESET);
-        System.out.println(RED + "  ██████  ███████  ██   ██  ██████  " + RESET);
+        System.out.println(RED + "  ██████╗ ███████╗ █████╗ ██████╗ " + RESET);
+        System.out.println(RED + "  ██╔══██╗██╔════╝██╔══██╗██╔══██╗" + RESET);
+        System.out.println(RED + "  ██║  ██║█████╗  ███████║██║  ██║" + RESET);
+        System.out.println(RED + "  ██║  ██║██╔══╝  ██╔══██║██║  ██║" + RESET);
+        System.out.println(RED + "  ██████╔╝███████╗██║  ██║██████╔╝" + RESET);
+        System.out.println(RED + "  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═════╝ " + RESET);
         printSeparator();
         System.out.println(YELLOW + "  The fortress has fallen. You fought bravely." + RESET);
+        System.out.println(CYAN +   "  Waves survived: " + RESET);
         printSeparator();
+    
     }
 
 
