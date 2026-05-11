@@ -4,6 +4,7 @@ import java.util.*;
 public abstract class Enemy extends Entity {
     private boolean isStunned = false;
     private int goldReward;
+    
     public boolean isStunned() {
         return isStunned;
     }

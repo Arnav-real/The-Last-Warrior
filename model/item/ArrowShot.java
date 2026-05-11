@@ -5,7 +5,7 @@ import model.entity.*;
 
 public class ArrowShot extends Ability{
     
-    ArrowShot() {
+    public ArrowShot() {
         super(10);
     }
 

@@ -6,7 +6,7 @@ import model.entity.Enemy;
 import model.entity.Warrior;
 
 public class BasicAttack extends Ability{
-    BasicAttack() {
+    public BasicAttack() {
         super(0);
     }
 

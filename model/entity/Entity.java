@@ -27,7 +27,7 @@ abstract class Entity {
         return hp > 0;
     }
 
-    abstract void attack(Entity target);
+    public abstract void attack(Entity target);
 
     public String toString() {
         return name + " | HP: " + hp + "/" + maxHp + " | ATK: " + atk + " | DEF: " + def;

@@ -5,7 +5,7 @@ import model.entity.*;
 
 public class Fireball extends Ability {
     
-    Fireball() {
+    public Fireball() {
         super(20);
     }
 
