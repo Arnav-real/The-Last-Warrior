@@ -82,8 +82,6 @@ public class CLIPrinter {
         System.out.println("  [2] " + PURPLE + "Fireball      " + RESET + "  (20 AP) — hits all enemies");
         System.out.println("  [3] " + BLUE + "Arrow Shot    " + RESET + "  (10 AP) — bypasses armor");
         System.out.println("  [4] " + YELLOW + "Lightning     " + RESET + "  (30 AP) — stuns 40% chance");
-        System.out.println("  [5] " + CYAN + "Shield Bash   " + RESET + "  (Free)  — +15 DEF this turn");
-        System.out.println("  [6] " + GREEN + "Use Item      " + RESET + "  (use potion or scroll)");
         printSeparator();
         System.out.print(GREEN + "  > " + RESET);   
     }

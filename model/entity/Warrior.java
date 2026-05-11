@@ -25,6 +25,7 @@ public class Warrior extends Entity{
     private int xp;
     private List<Ability> abilityList;
     private List<PowerUp> powerList;
+    private List<Item> inventory = new ArrayList<>();
 
     public Warrior(String name) {
     super(name, 150, 150, 10, 0);
@@ -43,6 +44,10 @@ public class Warrior extends Entity{
 
     public int getHp(){
         return hp;
+    }
+
+    public void setHp(int HP) {
+        hp = HP;
     }
 
     public int getMaxHp(){
