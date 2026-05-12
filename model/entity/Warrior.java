@@ -28,15 +28,25 @@ public class Warrior extends Entity{
     private List<Item> inventory = new ArrayList<>();
 
     public Warrior(String name) {
-    super(name, 200, 200, 30, 15);
-    this.ap = 80;
-    this.maxAp = 80;
-    this.gold = 0;
-    this.level = 1;
-    this.xp = 0;
-    this.powerList = new ArrayList<>();
-    this.abilityList = new ArrayList<>();
-}
+        super(name, 250, 250, 35, 15);
+        this.ap = 120;
+        this.maxAp = 120;
+        this.gold = 0;
+        this.level = 1;
+        this.xp = 0;
+        this.powerList = new ArrayList<>();
+        this.abilityList = new ArrayList<>();
+    }
+
+    public void levelUp() {
+        level++;
+        maxHp += 20;
+        hp = maxHp;
+        maxAp += 10;
+        ap = maxAp;
+        atk += 5;
+        def += 3;
+    }
 
     public String getName(){
         return name;

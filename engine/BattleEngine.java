@@ -93,19 +93,28 @@ public class BattleEngine {
     }
 
     public void handleBasicAttack(List<Enemy> enemies, Warrior warrior, Enemy targetEnemy) {
-        targetEnemy.takeDamage(warrior.getAtk());
-        CLIPrinter.printMessage("  You dealt " + warrior.getAtk() + " damage to " + targetEnemy.getName() + "!", CLIPrinter.GREEN);
+        targetEnemy.takeDamageIgnoreDefense(45);
+        CLIPrinter.printMessage("  You dealt 45 damage to " + targetEnemy.getName() + "!", CLIPrinter.GREEN);
+        if(!targetEnemy.isAlive()) {
+            warrior.setGold(warrior.getGold() + targetEnemy.get_gold());
+            warrior.setXp(warrior.getXp() + targetEnemy.get_xp());
+            CLIPrinter.printMessage("  " + targetEnemy.getName() + " defeated! +" + targetEnemy.get_gold() + " gold  +" + targetEnemy.get_xp() + " XP", CLIPrinter.YELLOW);
+        }
     }
-
+        
     public void handleFireball(List<Enemy> enemies, Warrior warrior, Enemy targetEnemy) {
         if(warrior.getAp() >= 20) {
             warrior.setAp(warrior.getAp() - 20);
             for(Enemy enemy : enemies) {
                 enemy.takeDamage(30);
+                if(!enemy.isAlive()) {
+                    warrior.setGold(warrior.getGold() + enemy.get_gold());
+                    warrior.setXp(warrior.getXp() + enemy.get_xp());
+                    CLIPrinter.printMessage("  " + enemy.getName() + " defeated! +" + enemy.get_gold() + " gold  +" + enemy.get_xp() + " XP", CLIPrinter.YELLOW);
+                }
             }
             CLIPrinter.printMessage("  Fireball hits all enemies for 30 damage!", CLIPrinter.RED);
-        }
-        else {
+        }else {
             CLIPrinter.printMessage("Insufficient Arcane Points!", CLIPrinter.RED);
         }
         
@@ -118,6 +127,11 @@ public class BattleEngine {
             for(Enemy enemy : enemies) {
                 if(Math.random() < 0.5) {
                     enemy.takeDamage(60);
+                }
+                if(!enemy.isAlive()) {
+                    warrior.setGold(warrior.getGold() + enemy.get_gold());
+                    warrior.setXp(warrior.getXp() + enemy.get_xp());
+                    CLIPrinter.printMessage("  " + enemy.getName() + " defeated! +" + enemy.get_gold() + " gold  +" + enemy.get_xp() + " XP", CLIPrinter.YELLOW);
                 }
             }
             CLIPrinter.printMessage("  Lightning strikes random enemies for 60 damage!", CLIPrinter.YELLOW);
@@ -134,13 +148,18 @@ public class BattleEngine {
         if(warrior.getAp() >= 10) {
             warrior.setAp(warrior.getAp() - 10);
             targetEnemy.takeDamageIgnoreDefense(45);
+
+            if(!targetEnemy.isAlive()) {
+                warrior.setGold(warrior.getGold() + targetEnemy.get_gold());
+                warrior.setXp(warrior.getXp() + targetEnemy.get_xp());
+                CLIPrinter.printMessage("  " + targetEnemy.getName() + " defeated! +" + targetEnemy.get_gold() + " gold  +" + targetEnemy.get_xp() + " XP", CLIPrinter.YELLOW);
+            }
+
             CLIPrinter.printMessage("  You dealt " + warrior.getAtk() + " damage to " + targetEnemy.getName() + "!", CLIPrinter.GREEN);
         }
         else {
             System.out.println("Insufficient Arcane Points!");
         }
-
-        
     }
 }
 

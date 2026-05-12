@@ -26,6 +26,73 @@ public class CLIPrinter {
         System.out.println(color + message + RESET);
     }
 
+    public static void printInstructions(Scanner sc) {
+        clearScreen();
+        printSeparator();
+        System.out.println(YELLOW + "  📖  HOW TO PLAY — LAST WARRIOR" + RESET);
+        printSeparator();
+        System.out.println(CYAN + "  You are the last guardian of an ancient fortress." + RESET);
+        System.out.println(CYAN + "  Endless waves of enemies attack each night." + RESET);
+        System.out.println(CYAN + "  Survive as long as you can." + RESET);
+        printSeparator();
+        System.out.println(GREEN + "  Press ENTER to continue..." + RESET);
+        sc.nextLine();
+
+        clearScreen();
+        printSeparator();
+        System.out.println(YELLOW + "  ⚔  COMBAT" + RESET);
+        printSeparator();
+        System.out.println(WHITE + "  Each turn YOU attack first, then enemies attack." + RESET);
+        System.out.println(WHITE + "  Pick a target when asked, or abilities hit all enemies." + RESET);
+        System.out.println(WHITE + "  If your HP reaches 0 — the fortress falls." + RESET);
+        printSeparator();
+        System.out.println(YELLOW + "  YOUR ABILITIES:" + RESET);
+        System.out.println("  [1] " + WHITE + "Basic Attack  " + RESET + "— Free. Hits one enemy for your ATK damage.");
+        System.out.println("  [2] " + PURPLE + "Fireball      " + RESET + "— 20 AP. Engulfs ALL enemies in flames for 30 damage.");
+        System.out.println("  [3] " + BLUE + "Arrow Shot    " + RESET + "— 10 AP. Pierces one enemy for 45 damage, ignores armor.");
+        System.out.println("  [4] " + YELLOW + "Lightning     " + RESET + "— 30 AP. Strikes random enemies for 60 damage + 40% stun.");
+        printSeparator();
+        System.out.println(GREEN + "  Press ENTER to continue..." + RESET);
+        sc.nextLine();
+
+        clearScreen();
+        printSeparator();
+        System.out.println(YELLOW + "  👹  ENEMIES" + RESET);
+        printSeparator();
+        System.out.println("  👺 " + RED + "Goblin     " + RESET + "— Weak but attacks TWICE per turn. Comes in large groups.");
+        System.out.println("  ⚔  " + RED + "Swordsman  " + RESET + "— Balanced fighter. Nothing special, but hits hard.");
+        System.out.println("  🏹 " + RED + "Archer     " + RESET + "— 30% chance to BYPASS your armor completely.");
+        System.out.println("  🗿 " + RED + "Giant      " + RESET + "— Massive HP and ATK. Skips every 3rd turn (slow).");
+        System.out.println("  🧙 " + RED + "Wizard     " + RESET + "— HEALS allies each turn. Kill him first!");
+        System.out.println("  🐉 " + RED + "Dragon     " + RESET + "— BOSS. Every 3rd turn unleashes Fire Breath for 1.5x damage.");
+        printSeparator();
+        System.out.println(CYAN + "  TIP: Kill Wizards first — they heal other enemies!" + RESET);
+        System.out.println(CYAN + "  TIP: Use Fireball on large groups, Arrow Shot on Wizards." + RESET);
+        printSeparator();
+        System.out.println(GREEN + "  Press ENTER to continue..." + RESET);
+        sc.nextLine();
+
+        clearScreen();
+        printSeparator();
+        System.out.println(YELLOW + "  📈  PROGRESSION" + RESET);
+        printSeparator();
+        System.out.println(WHITE + "  ⭐ Kill enemies to earn " + YELLOW + "GOLD" + WHITE + " and " + CYAN + "XP" + RESET);
+        System.out.println(WHITE + "  ⭐ Earn enough XP to " + GREEN + "LEVEL UP" + WHITE + " — boosts all your stats" + RESET);
+        System.out.println(WHITE + "  ⭐ Every 3 waves choose a " + PURPLE + "POWER-UP" + WHITE + " to enhance your warrior" + RESET);
+        System.out.println(WHITE + "  ⭐ Spend gold in the " + YELLOW + "SHOP" + WHITE + " between waves" + RESET);
+        printSeparator();
+        System.out.println(YELLOW + "  WAVE UNLOCKS:" + RESET);
+        System.out.println("  Wave  1  → " + RED + "Goblins" + RESET);
+        System.out.println("  Wave  3  → " + RED + "Swordsmen" + RESET);
+        System.out.println("  Wave  5  → " + RED + "Archers" + RESET);
+        System.out.println("  Wave  8  → " + RED + "Giants" + RESET);
+        System.out.println("  Wave 12  → " + RED + "Wizards" + RESET);
+        System.out.println("  Wave 15  → " + RED + "Dragon 🐉" + RESET);
+        printSeparator();
+        System.out.println(GREEN + "  Press ENTER to begin your journey..." + RESET);
+        sc.nextLine();
+    }
+
     public static void printWarriorStats(Warrior warrior) {
         printSeparator();
         System.out.println(YELLOW + "  ⚔  " + warrior.getName() +

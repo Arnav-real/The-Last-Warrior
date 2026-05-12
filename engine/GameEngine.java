@@ -26,6 +26,11 @@ public class GameEngine {
 
     public void start() {
         CLIPrinter.printWelcome();
+        System.out.print(CLIPrinter.CYAN + "  New player? Read instructions? [y/n]: " + CLIPrinter.RESET);
+        String choice = sc.nextLine();
+        if(choice.equalsIgnoreCase("y")) {
+            CLIPrinter.printInstructions(sc);
+        }
         CLIPrinter.printAskName();
         String name = sc.nextLine();
         Warrior warrior = new Warrior(name);
@@ -35,10 +40,20 @@ public class GameEngine {
         while(true) {
             List<Enemy> enemies = waveComposer.buildWave(currentWave);
             battleEngine.startWave(currentWave, warrior, enemies);
+
             
+            if(warrior.getXp() >= warrior.getLevel() * 100) {
+                warrior.levelUp();
+                CLIPrinter.printMessage("  ⚔ LEVEL UP! You are now Level " + warrior.getLevel() + "!", CLIPrinter.YELLOW);
+                CLIPrinter.printMessage("  HP, AP, ATK and DEF increased!", CLIPrinter.GREEN);
+            }
+
             if(!warrior.isAlive()) break;
 
             currentWave++;
+            for(Enemy enemy : enemies) {
+                enemy.scaleToWave(currentWave);
+            }
             CLIPrinter.printPressEnter();
             sc.nextLine();
         }
