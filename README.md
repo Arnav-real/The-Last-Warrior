@@ -7,7 +7,7 @@ git clone https://github.com/Arnav-real/The-Last-Warrior.git
 
 # Navigate to project
 cd The-Last-Warrior
-$OutputEncoding = [Console]::OutputEncoding = [Text.Encoding]::UTF8
+$OutputEncoding = [Console]::OutputEncoding = [Text.Encoding]::UTF8\n
 Windows users: Run chcp 65001 in terminal before running for proper character rendering.
 
 # Compile
